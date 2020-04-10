@@ -13,7 +13,34 @@
 		B01BB198243F39B7003E1301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01BB196243F39B7003E1301 /* Main.storyboard */; };
 		B01BB19A243F39B9003E1301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01BB199243F39B9003E1301 /* Assets.xcassets */; };
 		B01BB19D243F39B9003E1301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01BB19B243F39B9003E1301 /* LaunchScreen.storyboard */; };
+		B0BFA88D244082F200442E34 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFA88C244082F200442E34 /* ShareViewController.swift */; };
+		B0BFA890244082F200442E34 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BFA88E244082F200442E34 /* MainInterface.storyboard */; };
+		B0BFA894244082F200442E34 /* Share Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0BFA88A244082F200442E34 /* Share Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0BFA892244082F200442E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B01BB185243F39B7003E1301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0BFA889244082F200442E34;
+			remoteInfo = "Share Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B0BFA895244082F200442E34 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B0BFA894244082F200442E34 /* Share Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B01BB18D243F39B7003E1301 /* Streaming Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Streaming Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +51,21 @@
 		B01BB199243F39B9003E1301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01BB19C243F39B9003E1301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B01BB19E243F39B9003E1301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0BFA88A244082F200442E34 /* Share Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Share Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BFA88C244082F200442E34 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		B0BFA88F244082F200442E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B0BFA891244082F200442E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B01BB18A243F39B7003E1301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BFA887244082F200442E34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				B01BB18F243F39B7003E1301 /* Streaming Hell */,
+				B0BFA88B244082F200442E34 /* Share Extension */,
 				B01BB18E243F39B7003E1301 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				B01BB18D243F39B7003E1301 /* Streaming Hell.app */,
+				B0BFA88A244082F200442E34 /* Share Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +107,16 @@
 			path = "Streaming Hell";
 			sourceTree = "<group>";
 		};
+		B0BFA88B244082F200442E34 /* Share Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFA88C244082F200442E34 /* ShareViewController.swift */,
+				B0BFA88E244082F200442E34 /* MainInterface.storyboard */,
+				B0BFA891244082F200442E34 /* Info.plist */,
+			);
+			path = "Share Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +127,34 @@
 				B01BB189243F39B7003E1301 /* Sources */,
 				B01BB18A243F39B7003E1301 /* Frameworks */,
 				B01BB18B243F39B7003E1301 /* Resources */,
+				B0BFA895244082F200442E34 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B0BFA893244082F200442E34 /* PBXTargetDependency */,
 			);
 			name = "Streaming Hell";
 			productName = "Streaming Hell";
 			productReference = B01BB18D243F39B7003E1301 /* Streaming Hell.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B0BFA889244082F200442E34 /* Share Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0BFA898244082F200442E34 /* Build configuration list for PBXNativeTarget "Share Extension" */;
+			buildPhases = (
+				B0BFA886244082F200442E34 /* Sources */,
+				B0BFA887244082F200442E34 /* Frameworks */,
+				B0BFA888244082F200442E34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Share Extension";
+			productName = "Share Extension";
+			productReference = B0BFA88A244082F200442E34 /* Share Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +167,9 @@
 				ORGANIZATIONNAME = robotmafia;
 				TargetAttributes = {
 					B01BB18C243F39B7003E1301 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					B0BFA889244082F200442E34 = {
 						CreatedOnToolsVersion = 11.4;
 					};
 				};
@@ -116,6 +188,7 @@
 			projectRoot = "";
 			targets = (
 				B01BB18C243F39B7003E1301 /* Streaming Hell */,
+				B0BFA889244082F200442E34 /* Share Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +201,14 @@
 				B01BB19D243F39B9003E1301 /* LaunchScreen.storyboard in Resources */,
 				B01BB19A243F39B9003E1301 /* Assets.xcassets in Resources */,
 				B01BB198243F39B7003E1301 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BFA888244082F200442E34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BFA890244082F200442E34 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +225,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B0BFA886244082F200442E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0BFA88D244082F200442E34 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0BFA893244082F200442E34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0BFA889244082F200442E34 /* Share Extension */;
+			targetProxy = B0BFA892244082F200442E34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B01BB196243F39B7003E1301 /* Main.storyboard */ = {
@@ -161,6 +258,14 @@
 				B01BB19C243F39B9003E1301 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B0BFA88E244082F200442E34 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0BFA88F244082F200442E34 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,6 +388,7 @@
 		B01BB1A2243F39B9003E1301 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YJYBGG5KZ;
@@ -301,6 +407,7 @@
 		B01BB1A3243F39B9003E1301 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YJYBGG5KZ;
@@ -311,6 +418,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.robotmafia.Streaming-Hell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0BFA896244082F200442E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YJYBGG5KZ;
+				INFOPLIST_FILE = "Share Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.robotmafia.Streaming-Hell.Share-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0BFA897244082F200442E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YJYBGG5KZ;
+				INFOPLIST_FILE = "Share Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.robotmafia.Streaming-Hell.Share-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +478,15 @@
 			buildConfigurations = (
 				B01BB1A2243F39B9003E1301 /* Debug */,
 				B01BB1A3243F39B9003E1301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0BFA898244082F200442E34 /* Build configuration list for PBXNativeTarget "Share Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0BFA896244082F200442E34 /* Debug */,
+				B0BFA897244082F200442E34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
