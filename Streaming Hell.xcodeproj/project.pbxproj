@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		B0BFA88D244082F200442E34 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFA88C244082F200442E34 /* ShareViewController.swift */; };
 		B0BFA890244082F200442E34 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BFA88E244082F200442E34 /* MainInterface.storyboard */; };
 		B0BFA894244082F200442E34 /* Share Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0BFA88A244082F200442E34 /* Share Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B0BFA89A2440846D00442E34 /* StreamingHellClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFA8992440846D00442E34 /* StreamingHellClient.swift */; };
+		B0BFA89C244084A500442E34 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFA89B244084A500442E34 /* Alerts.swift */; };
+		B0BFA89F2440850200442E34 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B0BFA89E2440850200442E34 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,8 @@
 		B0BFA88C244082F200442E34 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B0BFA88F244082F200442E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B0BFA891244082F200442E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0BFA8992440846D00442E34 /* StreamingHellClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingHellClient.swift; sourceTree = "<group>"; };
+		B0BFA89B244084A500442E34 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BFA89F2440850200442E34 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +119,8 @@
 				B0BFA88C244082F200442E34 /* ShareViewController.swift */,
 				B0BFA88E244082F200442E34 /* MainInterface.storyboard */,
 				B0BFA891244082F200442E34 /* Info.plist */,
+				B0BFA8992440846D00442E34 /* StreamingHellClient.swift */,
+				B0BFA89B244084A500442E34 /* Alerts.swift */,
 			);
 			path = "Share Extension";
 			sourceTree = "<group>";
@@ -152,6 +160,9 @@
 			dependencies = (
 			);
 			name = "Share Extension";
+			packageProductDependencies = (
+				B0BFA89E2440850200442E34 /* RxSwift */,
+			);
 			productName = "Share Extension";
 			productReference = B0BFA88A244082F200442E34 /* Share Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -183,6 +194,9 @@
 				Base,
 			);
 			mainGroup = B01BB184243F39B7003E1301;
+			packageReferences = (
+				B0BFA89D2440850200442E34 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = B01BB18E243F39B7003E1301 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,6 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BFA89A2440846D00442E34 /* StreamingHellClient.swift in Sources */,
+				B0BFA89C244084A500442E34 /* Alerts.swift in Sources */,
 				B0BFA88D244082F200442E34 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +413,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.robotmafia.Streaming-Hell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -416,6 +433,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.robotmafia.Streaming-Hell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -434,6 +452,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.robotmafia.Streaming-Hell.Share-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -453,6 +472,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.robotmafia.Streaming-Hell.Share-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -492,6 +512,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0BFA89D2440850200442E34 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0BFA89E2440850200442E34 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0BFA89D2440850200442E34 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B01BB185243F39B7003E1301 /* Project object */;
 }
